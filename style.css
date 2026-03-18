@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #071019;
+    color: white;
+    line-height: 1.6
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #071019;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px
+}
+
+nav a:hover {
+    color: #d4af37
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden
+}
+
+.hero video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35
+}
+
+.hero-content {
+    position: relative;
+    max-width: 700px
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 20px
+}
+
+.hero p {
+    color: #ccc;
+    margin-bottom: 30px
+}
+
+.btn {
+    padding: 14px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 10px
+}
+
+.btn-primary {
+    background: #d4af37;
+    color: black
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white
+}
+
+section {
+    padding: 120px 0
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px
+}
+
+.grid {
+    display: grid;
+    gap: 30px
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+}
+
+.card {
+    background: #0b1722;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08)
+}
+
+.card h3 {
+    margin-bottom: 10px
+}
+
+.card p {
+    color: #bbb;
+    font-size: 14px
+}
+
+.about p {
+    max-width: 800px;
+    color: #ccc
+}
+
+.global {
+    background: #08121c
+}
+
+.global img {
+    width: 100%;
+    border-radius: 10px
+}
+
+.global-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center
+}
+
+.contact-box {
+    background: #0b1722;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08)
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #aaa;
+    font-size: 14px
+}
+
+@media(max-width:900px) {
+    .hero h1 {
+        font-size: 42px
+    }
+
+    .global-wrap {
+        grid-template-columns: 1fr
+    }
+}
