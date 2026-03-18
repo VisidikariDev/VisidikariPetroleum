@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visidikari Petroleum Trading</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #071019;
+            color: white;
+            line-height: 1.6
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #071019;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: 1px
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #ddd;
+            font-size: 14px
+        }
+
+        nav a:hover {
+            color: #d4af37
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.35
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 700px
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            margin-bottom: 20px
+        }
+
+        .hero p {
+            color: #ccc;
+            margin-bottom: 30px
+        }
+
+        .btn {
+            padding: 14px 26px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 10px
+        }
+
+        .btn-primary {
+            background: #d4af37;
+            color: black
+        }
+
+        .btn-outline {
+            border: 1px solid white;
+            color: white
+        }
+
+        section {
+            padding: 120px 0
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 40px
+        }
+
+        .grid {
+            display: grid;
+            gap: 30px
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+        }
+
+        .card {
+            background: #0b1722;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.08)
+        }
+
+        .card h3 {
+            margin-bottom: 10px
+        }
+
+        .card p {
+            color: #bbb;
+            font-size: 14px
+        }
+
+        .about p {
+            max-width: 800px;
+            color: #ccc
+        }
+
+        .global {
+            background: #08121c
+        }
+
+        .global img {
+            width: 100%;
+            border-radius: 10px
+        }
+
+        .global-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center
+        }
+
+        .contact-box {
+            background: #0b1722;
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.08)
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 14px
+        }
+
+        @media(max-width:900px) {
+            .hero h1 {
+                font-size: 42px
+            }
+
+            .global-wrap {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <div class="logo">Visidikari Petroleum</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+
+        <video autoplay muted loop>
+            <source src="https://cdn.coverr.co/videos/coverr-oil-refinery-9712/1080p.mp4" type="video/mp4">
+        </video>
+
+        <div class="container hero-content">
+            <h1>Global Oil & Gas Trading Partner</h1>
+
+            <p>
+                Visidikari Petroleum Trading supports international petroleum trading,
+                energy logistics coordination and global fuel supply partnerships.
+            </p>
+
+            <a class="btn btn-primary" href="#contact">Contact Us</a>
+            <a class="btn btn-outline" href="#products">Our Products</a>
+
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+
+            <h2 class="section-title">About Company</h2>
+
+            <p>
+                Visidikari Petroleum Trading is an oil and gas trading company focused on
+                petroleum supply, energy logistics and international fuel trading.
+
+                Our business supports global energy markets through reliable trading
+                partnerships, commercial coordination and petroleum supply solutions
+                across regional and international markets.
+            </p>
+
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+
+            <h2 class="section-title">Petroleum Products</h2>
+
+            <div class="grid grid-3">
+
+                <div class="card">
+                    <h3>EN590 Diesel</h3>
+                    <p>Ultra‑low sulfur diesel used for transportation and industry.</p>
+                </div>
+                <div class="card">
+                    <h3>Gasoline RON95 / RON97</h3>
+                    <p>High quality refined gasoline for automotive markets.</p>
+                </div>
+                <div class="card">
+                    <h3>Jet Fuel A1</h3>
+                    <p>Aviation turbine fuel supplied through global trading networks.</p>
+                </div>
+                <div class="card">
+                    <h3>Liquefied Petroleum Gas</h3>
+                    <p>LPG supply for residential and industrial energy needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Fuel Oil</h3>
+                    <p>Fuel oil for marine and power generation industries.</p>
+                </div>
+                <div class="card">
+                    <h3>Crude Oil Trading</h3>
+                    <p>Commercial crude oil trading and supply coordination.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services" class="global">
+        <div class="container">
+
+            <h2 class="section-title">Services</h2>
+
+            <div class="grid grid-3">
+
+                <div class="card">
+                    <h3>Global Petroleum Trading</h3>
+                    <p>Connecting international buyers and suppliers in global energy markets.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Marine Logistics</h3>
+                    <p>Coordination of tanker vessels, port operations and petroleum logistics.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Fuel Supply</h3>
+                    <p>Reliable diesel, gasoline and petroleum supply solutions.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="global">
+        <div class="container global-wrap">
+
+            <div>
+
+                <h2 class="section-title">Global Trading Network</h2>
+
+                <p>
+                    Visidikari Petroleum Trading supports energy trading partnerships
+                    across Southeast Asia, the Middle East and international petroleum
+                    markets.
+                </p>
+
+                <br>
+
+                <p>
+                    • Petroleum trading partnerships<br>
+                    • Energy logistics coordination<br>
+                    • Global fuel supply network
+                </p>
+
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4" />
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+
+            <h2 class="section-title">Business Enquiries</h2>
+
+            <div class="contact-box">
+
+                <p>
+                    Contact Visidikari Petroleum Trading for petroleum trading
+                    opportunities and global fuel supply partnerships.
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>Email</strong><br>
+                    visidikaripetroleum@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Visidikari Petroleum Trading
+    </footer>
+
+</body>
+
+</html>
