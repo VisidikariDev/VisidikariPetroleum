@@ -4,7 +4,8 @@
     box-sizing: border-box
 }
 
-html, body{
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -459,6 +460,43 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .global-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .global-wrap h2 {
+        font-size: 34px;
+        line-height: 1.15;
+        margin-bottom: 16px;
+    }
+
+    .global-wrap p {
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .global-wrap ul {
+        padding-left: 20px;
+        margin-top: 12px;
+    }
+
+    .global-wrap li {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+
+    .global-wrap img {
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
     .nav {
         display: flex;
         justify-content: space-between;
@@ -483,103 +521,108 @@ footer {
         gap: 12px;
     }
 
-    .menu-toggle {
-        display: block;
-        flex-shrink: 0;
-        margin-left: 12px;
-    }
-
-    nav a {
-        margin-left: 0;
-        font-size: 13px;
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #071019;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        gap: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-        z-index: 999;
-    }
-
-    .nav-links a {
-        margin-left: 0;
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hero {
-        min-height: 100vh;
-        padding: 120px 0 80px;
-        height: auto;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-        line-height: 1.2;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .section-title {
-        font-size: 28px;
-        margin-bottom: 25px;
-    }
-
-    section {
-        padding: 90px 0;
-    }
-
-    .btn {
-        display: inline-block;
-        margin-bottom: 12px;
-        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-    }
-
-    .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        background: #071019;
-    }
-
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-box {
-        padding: 25px;
-    }
-
-    #services {
-        min-height: 100vh;
-        height: auto;
+    .container {
+        padding: 0 20px;
     }
 }
+
+.menu-toggle {
+    display: block;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+nav a {
+    margin-left: 0;
+    font-size: 13px;
+}
+
+.nav-links {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #071019;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+}
+
+.nav-links a {
+    margin-left: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 120px 0 80px;
+    height: auto;
+}
+
+.hero-content {
+    max-width: 100%;
+}
+
+.hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 15px;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #071019;
+}
+
+.grid-3 {
+    grid-template-columns: 1fr;
+}
+
+.contact-box {
+    padding: 25px;
+}
+
+#services {
+    min-height: 100vh;
+    height: auto;
+}
+
 
 @media (max-width: 480px) {
     .container {
