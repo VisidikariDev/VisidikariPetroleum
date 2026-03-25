@@ -13,10 +13,19 @@
 
 <body>
 
+    <div id="progressBar"></div>
+
     <header>
         <div class="container nav">
             <div class="logo">Visidikari Petroleum</div>
-            <nav>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links">
                 <a href="#about">About</a>
                 <a href="#products">Products</a>
                 <a href="#services">Services</a>
@@ -31,15 +40,15 @@
         </video>
 
         <div class="container hero-content">
-            <h1>Global Oil & Gas Trading Partner</h1>
+            <h1 class="hero-title">Global Oil & Gas Trading Partner</h1>
 
-            <p>
+            <p class="hero-text">
                 Visidikari Petroleum Trading supports international petroleum trading,
                 energy logistics coordination and global fuel supply partnerships.
             </p>
 
-            <a class="btn btn-primary" href="#contact">Contact Us</a>
-            <a class="btn btn-outline" href="#products">Our Products</a>
+            <a class="btn btn-primary hero-btn hero-btn-1" href="#contact">Contact Us</a>
+            <a class="btn btn-outline hero-btn hero-btn-2" href="#products">Our Products</a>
 
         </div>
     </section>
@@ -66,7 +75,7 @@
 
             <h2 class="section-title">Petroleum Products</h2>
 
-            <div class="grid grid-3">
+            <div class="grid grid-3 reveal">
 
                 <div class="card">
                     <img src="images/Diesel.png" alt="EN590 Diesel">
@@ -109,7 +118,7 @@
 
             <h2 class="section-title">Services</h2>
 
-            <div class="grid grid-3">
+            <div class="grid grid-3 reveal">
 
                 <div class="card">
                     <h3>Global Petroleum Trading</h3>
@@ -154,38 +163,47 @@
 
             </div>
 
-            <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4" />
+            <img src="images/Network.jpeg" />
 
         </div>
     </section>
 
     <section id="contact">
         <div class="container">
+            <h2 class="section-title reveal">Contact Us</h2>
 
-            <h2 class="section-title">Business Enquiries</h2>
+            <div class="contact-box reveal">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
 
-            <div class="contact-box">
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
 
-                <p>
-                    Contact Visidikari Petroleum Trading for petroleum trading
-                    opportunities and global fuel supply partnerships.
-                </p>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
 
-                <br>
+                    <div class="form-group">
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    </div>
 
-                <p>
-                    <strong>Email</strong><br>
-                    visidikaripetroleum@gmail.com
-                </p>
-
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
-
         </div>
     </section>
+
+    <button id="backToTop">↑</button>
 
     <footer>
         © 2026 Visidikari Petroleum Trading
     </footer>
 
+    <script src="script.js"></script>
+
 </body>
+
 </html>
