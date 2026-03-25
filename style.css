@@ -4,6 +4,10 @@
     box-sizing: border-box
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
 html {
     scroll-behavior: smooth
 }
@@ -260,6 +264,8 @@ nav a:hover {
 }
 
 section {
+    position: relative;
+    overflow: hidden;
     padding: 120px 0;
     scroll-margin-top: 90px;
 }
@@ -490,7 +496,7 @@ footer {
 
     .nav-links {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
         width: 100%;
@@ -501,6 +507,7 @@ footer {
         gap: 18px;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+        z-index: 999;
     }
 
     .nav-links a {
