@@ -35,33 +35,45 @@
     </header>
 
     <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-grid"></div>
+
         <div class="container hero-content">
+            <div class="hero-accent"></div>
             <h1 class="hero-title">Global Oil & Gas Trading Partner</h1>
 
             <p class="hero-text">
                 Visidikari Petroleum Trading supports international petroleum trading,
-                energy logistics coordination and global fuel supply partnerships.
+                energy logistics coordination, and global fuel supply partnerships.
             </p>
 
-            <a class="btn btn-primary hero-btn hero-btn-1" href="#contact">Contact Us</a>
-            <a class="btn btn-outline hero-btn hero-btn-2" href="#products">Our Products</a>
-
+            <div class="hero-actions">
+                <a class="btn btn-primary hero-btn hero-btn-1" href="#contact">Contact Us</a>
+                <a class="btn btn-outline hero-btn hero-btn-2" href="#products">Our Products</a>
+            </div>
         </div>
     </section>
 
     <section id="about" class="about">
-        <div class="container">
+        <div class="container about-wrap">
 
-            <h2 class="section-title">About Company</h2>
+            <div class="about-text">
+                <h2 class="section-title">About Company</h2>
 
-            <p>
-                Visidikari Petroleum Trading is an oil and gas trading company focused on
-                petroleum supply, energy logistics and international fuel trading.
+                <p>
+                    Visidikari Petroleum Trading is an oil and gas trading company focused on petroleum supply,
+                    energy logistics and international fuel trading.
+                </p>
 
-                Our business supports global energy markets through reliable trading
-                partnerships, commercial coordination and petroleum supply solutions
-                across regional and international markets.
-            </p>
+                <p>
+                    Our business supports global energy markets through reliable trading partnerships,
+                    commercial coordination and petroleum supply solutions across regional and international markets.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <img src="images/about.webp" alt="Oil refinery">
+            </div>
 
         </div>
     </section>
@@ -74,7 +86,7 @@
             <div class="grid grid-3 reveal">
 
                 <div class="card">
-                    <img src="images/Diesel.png" alt="EN590 Diesel">
+                    <img src="images/Diesel.webp" alt="EN590 Diesel">
                     <h3>EN590 Diesel</h3>
                     <p>Ultra‑low sulfur diesel used for transportation and industry.</p>
                 </div>
@@ -136,11 +148,11 @@
         </div>
     </section>
 
-    <section class="global">
+    <section class="global global-network">
         <div class="container global-wrap">
 
-            <div>
-
+            <div class="global-copy">
+                <div class="section-kicker">International Reach</div>
                 <h2 class="section-title">Global Trading Network</h2>
 
                 <p>
@@ -149,19 +161,16 @@
                     markets.
                 </p>
 
-                <br>
-
-                <p>
-                    • Petroleum trading partnerships<br>
-                    • Energy logistics coordination<br>
-                    • Global fuel supply network
-                </p>
-
+                <div class="network-points">
+                    <div class="network-point">Petroleum trading partnerships</div>
+                    <div class="network-point">Energy logistics coordination</div>
+                    <div class="network-point">Global fuel supply network</div>
+                </div>
             </div>
 
-            <img src="images/Network.webp" />
-
-        </div>
+            <div class="map-frame">
+                <img src="images/Network.webp" alt="Global trading network map">
+            </div>
     </section>
 
     <section id="contact">
@@ -187,7 +196,10 @@
                         <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span class="btn-text">Submit Inquiry</span>
+                        <span class="btn-spinner" aria-hidden="true"></span>
+                    </button>
                     <p id="form-status"></p>
                 </form>
             </div>
@@ -204,7 +216,15 @@
 
     <div id="successPopup" class="popup">
         <div class="popup-box">
-            <div class="popup-icon">✓</div>
+            <div class="popup-glow"></div>
+
+            <div class="popup-icon">
+                <svg viewBox="0 0 52 52" class="checkmark" aria-hidden="true">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark-check" fill="none" d="M14 27l7 7 17-17" />
+                </svg>
+            </div>
+
             <h3>Message Sent Successfully</h3>
             <p>Your inquiry has been submitted successfully. Our team will contact you shortly.</p>
             <button type="button" id="closePopup" class="popup-btn">Close</button>

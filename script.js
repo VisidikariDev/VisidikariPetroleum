@@ -65,13 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactForm) {
         const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const btnText = submitBtn.querySelector('.btn-text');
 
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const originalBtnText = submitBtn.textContent;
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+            submitBtn.classList.add('loading');
+            btnText.textContent = 'Sending...';
 
             const formData = new FormData(contactForm);
 
@@ -88,11 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok && result.success) {
                     contactForm.reset();
+
+                    successPopup.classList.remove('active');
+                    void successPopup.offsetWidth;
                     successPopup.classList.add('active');
 
                     setTimeout(() => {
                         successPopup.classList.remove('active');
-                    }, 3000);
+                    }, 3200);
                 } else {
                     alert(result.message || 'Something went wrong. Please try again.');
                 }
@@ -101,7 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error(error);
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.textContent = originalBtnText;
+                submitBtn.classList.remove('loading');
+                btnText.textContent = 'Send Message';
             }
         });
     }
