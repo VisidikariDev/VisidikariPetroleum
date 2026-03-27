@@ -163,7 +163,7 @@ nav a.active::after,
     overflow: hidden;
     background-image:
         linear-gradient(rgba(7, 16, 25, 0.65), rgba(7, 16, 25, 0.75)),
-        url('images/background.png');
+        url('images/background.webp');
     background-size: cover;
     background-position: center 25%;
     background-repeat: no-repeat;
@@ -335,7 +335,7 @@ section::after {
 }
 
 .products {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/backgroundProduct.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/backgroundProduct.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -343,7 +343,7 @@ section::after {
 }
 
 #services {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/services.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/services.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
