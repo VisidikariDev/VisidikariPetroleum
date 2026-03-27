@@ -62,12 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Your message has been submitted.');
-        contactForm.reset();
-    });
-}
+        contactForm.addEventListener('submit', (e) => {
+            setTimeout(() => {  
+                alert('Your message has been submitted.');
+            }, 500);
+        });
+    }
 
     function revealOnScroll() {
         const triggerBottom = window.innerHeight * 0.88;
