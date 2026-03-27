@@ -460,6 +460,115 @@ footer {
     font-size: 14px;
 }
 
+#form-status {
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#form-status.success {
+    color: #7CFC98;
+}
+
+#form-status.error {
+    color: #ff7b7b;
+}
+
+.contact-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 10, 18, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 3000;
+}
+
+.popup.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.popup-box {
+    width: 100%;
+    max-width: 440px;
+    background: linear-gradient(180deg, rgba(11, 23, 34, 0.96), rgba(7, 16, 25, 0.98));
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    border-radius: 18px;
+    padding: 34px 28px 26px;
+    text-align: center;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    transform: translateY(18px) scale(0.96);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.popup.active .popup-box {
+    transform: translateY(0) scale(1);
+}
+
+.popup-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: #d4af37;
+    font-size: 32px;
+    font-weight: 700;
+    box-shadow: 0 0 24px rgba(212, 175, 55, 0.12);
+}
+
+.popup-box h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.popup-box p {
+    color: #c9d2dc;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.popup-btn {
+    background: #d4af37;
+    color: #071019;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.popup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+
+.contact-form button[type="submit"]:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
 @keyframes heroZoom {
     from {
         background-size: 100%;
@@ -670,5 +779,24 @@ footer {
         width: 42px;
         height: 42px;
         font-size: 18px;
+    }
+
+    .popup-box {
+        padding: 28px 20px 22px;
+        border-radius: 16px;
+    }
+
+    .popup-box h3 {
+        font-size: 22px;
+    }
+
+    .popup-box p {
+        font-size: 14px;
+    }
+
+    .popup-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
     }
 }

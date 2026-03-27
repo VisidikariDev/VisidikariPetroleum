@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
     const progressBar = document.getElementById('progressBar');
     const contactForm = document.querySelector('.contact-form');
+    const successPopup = document.getElementById('successPopup');
+    const closePopup = document.getElementById('closePopup');
 
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
@@ -62,10 +64,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            setTimeout(() => {  
-                alert('Your message has been submitted.');
-            }, 500);
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json'
+                    },
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    contactForm.reset();
+                    successPopup.classList.add('active');
+
+                    setTimeout(() => {
+                        successPopup.classList.remove('active');
+                    }, 3000);
+                } else {
+                    alert(result.message || 'Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                alert('Network error. Please try again.');
+                console.error(error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            }
+        });
+    }
+
+    if (closePopup) {
+        closePopup.addEventListener('click', () => {
+            successPopup.classList.remove('active');
+        });
+    }
+
+    if (successPopup) {
+        successPopup.addEventListener('click', (e) => {
+            if (e.target === successPopup) {
+                successPopup.classList.remove('active');
+            }
         });
     }
 
